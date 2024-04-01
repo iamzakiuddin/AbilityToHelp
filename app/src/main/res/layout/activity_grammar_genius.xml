@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.GrammarGeniusActivity"
+    android:background="@drawable/splash"
+    >
+    <RelativeLayout
+        android:id="@+id/rltTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingTop="24dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize">
+
+
+            <LinearLayout
+                android:id="@+id/backBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal"
+                android:layout_marginStart="10dp"
+                >
+                <ImageView
+                    android:id="@+id/imgBackButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/back_blue" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Back"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="@color/ios_blue"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtTitleSubHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:text="@string/grammar_genius"
+                android:gravity="center"
+                android:textColor="@color/colorBlack"
+                android:textSize="20.0dip"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/searchField"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:hint="Enter your sentence"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rltTop"
+        android:layout_margin="20dp"
+        android:textColor="#3d4b57"
+        android:textColorHint="@color/light"
+        android:singleLine="true"
+        android:textSize="16sp"
+        android:textCursorDrawable="@drawable/cursor_background"
+        android:background="@drawable/background_searchtext"
+        android:padding="12dp"
+        />
+    <Button
+        android:id="@+id/searchBtn"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:text="@string/search"
+        android:textAllCaps="false"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/button_bg"
+        android:fontFamily="@font/atma_semibold"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintStart_toStartOf="@+id/searchField"
+        app:layout_constraintTop_toBottomOf="@+id/searchField"
+        app:layout_constraintEnd_toEndOf="@+id/searchField"
+        android:layout_marginTop="5dp"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/grammarErrorsListView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/llAdView"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/searchBtn"
+        />
+    <RelativeLayout
+        android:id="@+id/llAdView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/llAdViewFacebook"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="gone" />
+    <ProgressBar
+        android:id="@+id/loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="gone"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#FFC928</color>
+    <color name="yellow">#FFC928</color>
+    <color name="yellow_secondary">#FFCC00</color>
+    <color name="colorCorrect">#16f10e</color>
+    <color name="colorWrong">#ed1725</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="light">#1A000000</color>
+    <!--<color name="colorTheme">#D2FFEB3B</color>-->
+    <color name="colorTheme">#FFFFFF</color>
+    <color name="colorBlue">#056336</color>
+    <color name="colorGray">#42C7C4C4</color>
+    <color name="purple">#B349FF</color>
+    <color name="light_blue">#38BDF2</color>
+    <color name="ios_blue">#0a84ff</color>
+    <color name="pink">#F2357B</color>
+    <color name="greenish_yellow">#FFC928</color>
+    <color name="disable_forground_grey">#42221f1f</color>
+    <color name="disable_thumb_grey">#1c000000</color>
+    <color name="enable_thumb_green">#46bdbf</color>
+    <color name="transparent_color">#70000000</color>
+</resources>

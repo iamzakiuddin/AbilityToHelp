@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:id="@+id/cardView"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:selectableItemBackground"
+    app:cardCornerRadius="12.0dip"
+    app:cardElevation="5.0dip"
+    android:layout_marginTop="10dp"
+    android:layout_marginStart="10dp"
+    >
+
+    <LinearLayout
+        android:id="@+id/lloutCardHome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:clipChildren="true"
+        >
+        <ImageView
+            android:id="@+id/imgHomeCategory"
+            android:layout_width="180dp"
+            android:layout_height="165.0dip"
+            android:padding="4.0dip"
+            android:scaleType="fitXY"
+            />
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/yellow_secondary"
+            android:gravity="center"
+            android:fontFamily="@font/atma_light"
+            android:textColor="@color/colorBlack"
+            android:textSize="17sp"
+            android:text="Alphabets"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

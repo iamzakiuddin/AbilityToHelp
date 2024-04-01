@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    android:padding="10dp"
+    >
+
+    <TextView
+        android:id="@+id/term"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/atma_semibold"
+        android:text="Term:"
+        android:textColor="@color/colorBlack"
+        />
+
+    <TextView
+        android:id="@+id/termData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/atma_semibold"
+        />
+
+    <TextView
+        android:id="@+id/definition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/atma_semibold"
+        android:text="Definition:"
+        android:textColor="@color/colorBlack"
+        />
+
+    <TextView
+        android:id="@+id/definitionData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/atma_semibold"
+        />
+
+    <TextView
+        android:id="@+id/category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/atma_semibold"
+        android:text="Category:"
+        android:textColor="@color/colorBlack"
+        />
+
+    <TextView
+        android:id="@+id/categoryData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/atma_semibold"
+        />
+
+    <TextView
+        android:id="@+id/categoryName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/atma_semibold"
+        android:text="Category Name:"
+        android:textColor="@color/colorBlack"
+        />
+
+    <TextView
+        android:id="@+id/categoryNameData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/atma_semibold"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/light"
+        android:layout_marginTop="3dp"
+        />
+</LinearLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cvCardSubHome"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:selectableItemBackground"
+    app:cardCornerRadius="10.0dip"
+    app:cardElevation="5.0dip"
+    app:cardUseCompatPadding="true"
+    app:cardBackgroundColor="@color/light_blue"
+    >
+
+    <RelativeLayout
+        android:id="@+id/lloutCardSubHome"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/elementSymbol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="H"
+            android:fontFamily="sans-serif-black"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            android:textColor="@color/pink"
+            android:gravity="center"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            />
+        <TextView
+            android:id="@+id/elementName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hydrogen"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:textSize="13sp"
+            android:letterSpacing="0"
+            android:textStyle="bold"
+            android:textColor="@color/greenish_yellow"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

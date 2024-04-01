@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context="com.apps.abilitytohelp.kidslearning.kidseducation.preschool.activity.video.ListVideoActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/rltTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/header_top_padding"
+        android:background="@color/colorWhite"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@color/colorWhite"
+            >
+            <LinearLayout
+                android:id="@+id/backBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal"
+                android:layout_marginStart="10dp"
+                >
+                <ImageView
+                    android:id="@+id/imgBackButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/back_blue" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Back"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="@color/ios_blue"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtTitleSubHome"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:text="@string/video_learning"
+                android:gravity="center"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/colorBlack"
+                android:textSize="18.0dip"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvVideoList"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:layout_margin="5.0dip" />
+
+    <RelativeLayout
+        android:id="@+id/llAdView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/llAdViewFacebook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible" />
+</LinearLayout>

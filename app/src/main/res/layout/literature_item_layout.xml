@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    android:padding="10dp"
+    >
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/atma_semibold"
+        android:text="Title:"
+        android:textColor="@color/colorBlack"
+        />
+
+    <TextView
+        android:id="@+id/titleData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/atma_semibold"
+        />
+
+    <TextView
+        android:id="@+id/subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/atma_semibold"
+        android:text="Subtitle:"
+        android:textColor="@color/colorBlack"
+        />
+
+    <TextView
+        android:id="@+id/subtitleData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/atma_semibold"
+        />
+
+    <TextView
+        android:id="@+id/writer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/atma_semibold"
+        android:text="Writer:"
+        android:textColor="@color/colorBlack"
+        />
+
+    <TextView
+        android:id="@+id/writerData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/atma_semibold"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/light"
+        android:layout_marginTop="3dp"
+        />
+</LinearLayout>

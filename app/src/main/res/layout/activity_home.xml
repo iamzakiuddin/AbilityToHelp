@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/splash"
+    android:orientation="vertical"
+    tools:context="com.apps.abilitytohelp.kidslearning.kidseducation.preschool.activity.HomeActivity">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:paddingTop="@dimen/header_top_padding">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize">
+
+
+            <LinearLayout
+                android:id="@+id/backBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal"
+                android:layout_marginStart="10dp"
+                >
+                <ImageView
+                    android:id="@+id/imgBackButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/back_blue" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Back"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="@color/ios_blue"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtTitleSubHome"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:text="@string/pre_school_kids_learning"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/colorBlack"
+                android:textSize="18.0dip"
+                android:gravity="center"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/txtExamTitle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:fontFamily="sans-serif"
+                android:text="@string/pre_school_kids_learning"
+                android:textColor="@color/colorBlack"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imgSoundOn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:src="@drawable/btn_volume_on"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/imgSoundOff"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:src="@drawable/btn_volume_off"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/transparent_color"
+        >
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvHomeCategories"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingEnd="10dp"
+            android:layout_marginBottom="10dp"
+            />
+    </FrameLayout>
+    <RelativeLayout
+        android:id="@+id/llAdView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/llAdViewFacebook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible" />
+</LinearLayout>
