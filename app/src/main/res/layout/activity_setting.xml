@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorGray"
-    tools:context="com.apps.abilitytohelp.kidslearning.kidseducation.preschool.activity.SettingActivity">
+    tools:context="com.androidapp.abilitytohelp.activity.SettingActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"

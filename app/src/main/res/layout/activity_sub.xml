@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@drawable/splash"
     android:orientation="vertical"
-    tools:context="com.apps.abilitytohelp.kidslearning.kidseducation.preschool.activity.SubActivity">
+    tools:context="com.androidapp.abilitytohelp.activity.SubActivity">
 
 
     <RelativeLayout

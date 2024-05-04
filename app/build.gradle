@@ -11,11 +11,11 @@ try {
 android {
     compileSdk 34
     defaultConfig {
-        applicationId "com.apps.abilitytohelp.kidslearning.kidseducation.preschool"
+        applicationId "com.adroidapp.abilitytohelp"
         minSdk 21
         targetSdk 34
-        versionCode 21
-        versionName "1.1.8"
+        versionCode 3
+        versionName "1.0.2"
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
         buildConfigField("String", "GEMINI_AI", "\"" + properties['API_KEY']+"\"")
     }
@@ -25,7 +25,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    namespace 'com.apps.abilitytohelp.kidslearning.kidseducation.preschool'
+    namespace 'com.androidapp.abilitytohelp'
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
@@ -77,6 +77,8 @@ dependencies {
 
     implementation ("com.google.android.play:app-update:2.1.0")
     implementation ("com.google.android.play:app-update-ktx:2.1.0")
+
+    implementation("androidx.core:core-splashscreen:1.0.1")
 }
 
 repositories {

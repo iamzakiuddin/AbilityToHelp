@@ -116,5 +116,5 @@ public static ** valueOf(java.lang.String);
 
 
 -optimizations !method/inlining/*
--keep class com.apps.abilitytohelp.kidslearning.kidseducation.preschool.model.** { *; }
--keepclassmembers class com.apps.abilitytohelp.kidslearning.kidseducation.preschool.model.** { *; }
+-keep class com.androidapp.abilitytohelp.model.** { *; }
+-keepclassmembers class com.androidapp.abilitytohelp.model.** { *; }

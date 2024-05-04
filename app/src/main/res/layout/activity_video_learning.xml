@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.apps.abilitytohelp.kidslearning.kidseducation.preschool.activity.video.VideoLearningActivity"
+    tools:context="com.androidapp.abilitytohelp.activity.video.VideoLearningActivity"
     android:background="@drawable/splash"
     >
     <RelativeLayout
