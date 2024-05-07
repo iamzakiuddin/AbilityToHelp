@@ -7,6 +7,7 @@ import android.widget.RelativeLayout;
 
 import androidx.annotation.NonNull;
 
+import com.androidapp.abilitytohelp.BuildConfig;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
@@ -28,7 +29,7 @@ public class CommonConstantAd {
 
     public static void googlebeforloadAd(Context context) {
         try {
-            InterstitialAd.load(context, Constant.GOOGLE_INTERSTITIAL_ID, getAdRequest(),
+            InterstitialAd.load(context, BuildConfig.INTERSTITIAL_ID, getAdRequest(),
                     new InterstitialAdLoadCallback() {
                         @Override
                         public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
@@ -96,7 +97,7 @@ public class CommonConstantAd {
         MobileAds.initialize(context, initializationStatus -> { });
         final com.google.android.gms.ads.AdView adViewBottom = new com.google.android.gms.ads.AdView(context);
         adViewBottom.setAdSize(AdSize.BANNER);
-        adViewBottom.setAdUnitId(Constant.GOOGLE_BANNER_ID);
+        adViewBottom.setAdUnitId(BuildConfig.BANNER_ID);
         llAdview.addView(adViewBottom);
         AdRequest adRequest = new AdRequest.Builder().build();
         adViewBottom.loadAd(adRequest);

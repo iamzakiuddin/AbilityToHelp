@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Ability to help</string>
-    <string name="AD_MOB_APPLICATION_ID">ca-app-pub-5789104871210524~2247216707</string>
     <string name="rate">Rate</string>
     <string name="share">Share</string>
     <string name="send_feedback">Send Feedback</string>

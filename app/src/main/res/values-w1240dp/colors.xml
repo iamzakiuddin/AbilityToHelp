@@ -18,6 +18,7 @@
     <color name="ios_blue">#0a84ff</color>
     <color name="pink">#F2357B</color>
     <color name="greenish_yellow">#FFC928</color>
+    <color name="brownish_yellow">#B28500</color>
     <color name="disable_forground_grey">#42221f1f</color>
     <color name="disable_thumb_grey">#1c000000</color>
     <color name="enable_thumb_green">#46bdbf</color>

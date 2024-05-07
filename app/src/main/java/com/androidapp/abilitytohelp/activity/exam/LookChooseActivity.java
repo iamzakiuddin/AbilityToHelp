@@ -171,7 +171,7 @@ public class LookChooseActivity extends AppCompatActivity implements CorrectAnsw
             learningDataModelArrayList.add(new LearningDataModel(R.drawable.l, "L for Lion", "Lion"));
             learningDataModelArrayList.add(new LearningDataModel(R.drawable.m, "M for Monkey", "Monkey"));
             learningDataModelArrayList.add(new LearningDataModel(R.drawable.n, "N for Nest", "Nest"));
-            learningDataModelArrayList.add(new LearningDataModel(R.drawable.orange_fruit, "O for Orange", "Orange"));
+            learningDataModelArrayList.add(new LearningDataModel(R.drawable.o, "O for Orange", "Orange"));
             learningDataModelArrayList.add(new LearningDataModel(R.drawable.p, "P for Parrot", "Parrot"));
             learningDataModelArrayList.add(new LearningDataModel(R.drawable.q, "Q for Queen", "Queen"));
             learningDataModelArrayList.add(new LearningDataModel(R.drawable.r, "R for Rabbit", "Rabbit"));
@@ -894,7 +894,7 @@ public class LookChooseActivity extends AppCompatActivity implements CorrectAnsw
             learningDataModelArrayList.add(new LearningDataModel(R.drawable.l, "L for Lion", "Lion"));
             learningDataModelArrayList.add(new LearningDataModel(R.drawable.m, "M for Monkey", "Monkey"));
             learningDataModelArrayList.add(new LearningDataModel(R.drawable.n, "N for Nest", "Nest"));
-            learningDataModelArrayList.add(new LearningDataModel(R.drawable.orange_fruit, "O for Orange", "Orange"));
+            learningDataModelArrayList.add(new LearningDataModel(R.drawable.o, "O for Orange", "Orange"));
             learningDataModelArrayList.add(new LearningDataModel(R.drawable.p, "P for Parrot", "Parrot"));
             learningDataModelArrayList.add(new LearningDataModel(R.drawable.q, "Q for Queen", "Queen"));
             learningDataModelArrayList.add(new LearningDataModel(R.drawable.r, "R for Rabbit", "Rabbit"));

@@ -41,13 +41,6 @@ public class Constant {
 
 
 
-    public static final String GOOGLE_ADMOB_APP_ID = "ca-app-pub-5789104871210524~2247216707";
-    //public static final String GOOGLE_ADMOB_APP_ID = "ca-app-pub-3940256099942544~3347511713";
-    public static final String GOOGLE_BANNER_ID = "ca-app-pub-5789104871210524/5803318331";
-    //public static final String GOOGLE_BANNER_ID = "ca-app-pub-3940256099942544/9214589741";
-    public static final String GOOGLE_INTERSTITIAL_ID = "ca-app-pub-5789104871210524/5942919130";
-    //public static final String GOOGLE_INTERSTITIAL_ID = "ca-app-pub-3940256099942544/1033173712";
-
     public static final String AD_GOOGLE = "google";
     public static final String AD_TYPE_FACEBOOK_GOOGLE = AD_GOOGLE;
 
