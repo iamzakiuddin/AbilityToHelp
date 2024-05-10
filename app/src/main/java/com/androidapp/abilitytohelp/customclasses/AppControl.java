@@ -6,6 +6,7 @@ import android.speech.tts.TextToSpeech;
 
 import com.androidapp.abilitytohelp.R;
 import com.androidapp.abilitytohelp.utils.Utils;
+import com.parse.Parse;
 
 import java.util.Locale;
 
@@ -36,6 +37,11 @@ public class AppControl extends Application {
 
         });
         textToSpeech.setSpeechRate(0.3f);
+        Parse.initialize(new Parse.Configuration.Builder(this)
+                .applicationId("zlB2X4kOFTPRWS7pZov1TpYppn3aATx0D7Jl7Rw3")
+                .clientKey("uKHhWICtEoos59WbzKXTolrwGCwkm1EfA8XT7wq5")
+                .server("https://parseapi.back4app.com/")
+                .build());
     }
 
 }

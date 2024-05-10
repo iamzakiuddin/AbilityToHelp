@@ -21,6 +21,8 @@ android {
         buildConfigField("String","BANNER_ID","\"" + properties['BANNER_ID']+"\"")
         buildConfigField("String","INTERSTITIAL_ID","\"" + properties['INTERSTITIAL_ID']+"\"")
         resValue("string","ADS_ID","\"" + properties['ADS_ID']+"\"")
+        resValue("string","PARSE_APP_ID","\"" + properties['PARSE_APP_ID']+"\"")
+        resValue("string","PARSE_CLIENT_KEY","\"" + properties['PARSE_CLIENT_KEY']+"\"")
     }
     buildTypes {
         release {
@@ -29,6 +31,9 @@ android {
             buildConfigField("String","BANNER_ID","\"" + properties['RELEASE_BANNER_ID']+"\"")
             buildConfigField("String","INTERSTITIAL_ID","\"" + properties['RELEASE_INTERSTITIAL_ID']+"\"")
             resValue("string","ADS_ID","\"" + properties['RELEASE_ADS_ID']+"\"")
+            resValue("string","PARSE_APP_ID","\"" + properties['PARSE_APP_ID']+"\"")
+            resValue("string","PARSE_CLIENT_KEY","\"" + properties['PARSE_CLIENT_KEY']+"\"")
+
         }
     }
     namespace 'com.androidapp.abilitytohelp'
@@ -85,6 +90,9 @@ dependencies {
     implementation ("com.google.android.play:app-update-ktx:2.1.0")
 
     implementation("androidx.core:core-splashscreen:1.0.1")
+
+    //Parse SDK
+    implementation ("com.github.parse-community.Parse-SDK-Android:parse:4.3.0")
 }
 
 repositories {

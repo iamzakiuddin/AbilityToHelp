@@ -22,6 +22,7 @@ import com.androidapp.abilitytohelp.broadcastmanagers.DailyBroadcast
 import com.androidapp.abilitytohelp.interfaces.AdsCallback
 import com.androidapp.abilitytohelp.utils.CommonConstantAd
 import com.androidapp.abilitytohelp.utils.Utils
+import com.parse.ParseUser
 import java.util.Calendar
 
 class MainMenu : AppCompatActivity(), AdsCallback {
@@ -64,7 +65,11 @@ class MainMenu : AppCompatActivity(), AdsCallback {
         }
 
         profileIcon?.setOnClickListener {
-            startActivity(Intent(this,AuthenticationActivity::class.java))
+            if (ParseUser.getCurrentUser() != null) {
+                startActivity(Intent(this, ProfileActivity::class.java))
+            } else {
+                startActivity(Intent(this, AuthenticationActivity::class.java))
+            }
         }
 
     }

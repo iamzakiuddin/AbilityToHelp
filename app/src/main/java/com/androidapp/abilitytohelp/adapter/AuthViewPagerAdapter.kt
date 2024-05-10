@@ -22,12 +22,12 @@ class AuthViewPagerAdapter(fragmentManager: FragmentManager, lifecycle: Lifecycl
     override fun createFragment(position: Int): Fragment {
         return when (position) {
             0 -> {
-                val fragment = SignUpFragment.newInstance("","")
+                val fragment = SignUpFragment()
                 signUpFragment = fragment
                 fragment
             }
             else -> {
-                val fragment = SignInFragment.newInstance("","")
+                val fragment = SignInFragment()
                 signInFragment = fragment
                 fragment
             }
