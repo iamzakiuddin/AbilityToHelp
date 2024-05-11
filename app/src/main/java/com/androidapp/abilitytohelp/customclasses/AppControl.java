@@ -38,8 +38,8 @@ public class AppControl extends Application {
         });
         textToSpeech.setSpeechRate(0.3f);
         Parse.initialize(new Parse.Configuration.Builder(this)
-                .applicationId("zlB2X4kOFTPRWS7pZov1TpYppn3aATx0D7Jl7Rw3")
-                .clientKey("uKHhWICtEoos59WbzKXTolrwGCwkm1EfA8XT7wq5")
+                .applicationId(getString(R.string.PARSE_APP_ID))
+                .clientKey(getString(R.string.PARSE_CLIENT_KEY))
                 .server("https://parseapi.back4app.com/")
                 .build());
     }
