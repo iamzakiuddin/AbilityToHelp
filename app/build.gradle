@@ -93,6 +93,9 @@ dependencies {
 
     //Parse SDK
     implementation ("com.github.parse-community.Parse-SDK-Android:parse:4.3.0")
+
+    implementation "androidx.emoji2:emoji2-emojipicker:1.4.0"
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
 }
 
 repositories {

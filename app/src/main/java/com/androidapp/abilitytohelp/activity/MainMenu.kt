@@ -10,6 +10,7 @@ import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
 import android.widget.Button
+import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
@@ -33,6 +34,7 @@ class MainMenu : AppCompatActivity(), AdsCallback {
     var llAdView: RelativeLayout? = null
     var llAdViewFacebook: LinearLayout? = null
     var profileIcon: ImageView? = null
+    var profileButton : FrameLayout? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,6 +46,7 @@ class MainMenu : AppCompatActivity(), AdsCallback {
         llAdView = findViewById(R.id.llAdView)
         llAdViewFacebook = findViewById(R.id.llAdViewFacebook)
         profileIcon = findViewById(R.id.profileIcon)
+        profileButton = findViewById(R.id.profileBtn)
 
         createNotificationChannel()
         setupDailyNotificationReminder()
@@ -64,7 +67,7 @@ class MainMenu : AppCompatActivity(), AdsCallback {
             overridePendingTransition(R.anim.slide_up_a, R.anim.slide_up_b)
         }
 
-        profileIcon?.setOnClickListener {
+        profileButton?.setOnClickListener {
             if (ParseUser.getCurrentUser() != null) {
                 startActivity(Intent(this, ProfileActivity::class.java))
             } else {

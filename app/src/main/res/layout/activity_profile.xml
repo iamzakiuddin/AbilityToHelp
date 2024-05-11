@@ -11,22 +11,24 @@
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mainCon"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/bg_main"
         tools:context=".ui.AuthActivity">
 
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profileImage"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             android:layout_centerHorizontal="true"
             android:layout_gravity="center"
-            android:adjustViewBounds="true"
+            android:background="@drawable/avatar_bg"
+            app:civ_border_color="@color/ios_blue_light"
             app:layout_constraintBottom_toTopOf="@+id/loginLayout"
             app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="20dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
             tools:ignore="MissingConstraints" />
 
         <LinearLayout
@@ -175,5 +177,47 @@
             android:layout_marginTop="20dp"
             android:visibility="gone"
             />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.65"
+            />
+        <LinearLayout
+            android:id="@+id/emojiLayout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/guideline1"
+            android:elevation="10dp"
+            android:background="@color/colorWhite"
+            android:visibility="gone"
+            >
+            <TextView
+                android:id="@+id/done"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Done"
+                android:fontFamily="@font/atma_medium"
+                android:textColor="@color/ios_blue"
+                android:layout_gravity="right"
+                android:gravity="center_vertical"
+                android:paddingEnd="10dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:textSize="20sp"
+                />
+            <androidx.emoji2.emojipicker.EmojiPickerView
+                android:id="@+id/emoji_picker"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:emojiGridColumns="9" />
+        </LinearLayout>
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
