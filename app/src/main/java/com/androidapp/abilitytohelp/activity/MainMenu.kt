@@ -9,11 +9,13 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import com.androidapp.abilitytohelp.R
@@ -24,7 +26,9 @@ import com.androidapp.abilitytohelp.interfaces.AdsCallback
 import com.androidapp.abilitytohelp.utils.CommonConstantAd
 import com.androidapp.abilitytohelp.utils.Utils
 import com.parse.ParseUser
+import hotchemi.android.rate.AppRate
 import java.util.Calendar
+
 
 class MainMenu : AppCompatActivity(), AdsCallback {
 
@@ -74,6 +78,21 @@ class MainMenu : AppCompatActivity(), AdsCallback {
                 startActivity(Intent(this, AuthenticationActivity::class.java))
             }
         }
+        AppRate.with(this)
+            .setInstallDays(0) // default 10, 0 means install day.
+            .setLaunchTimes(3) // default 10
+            .setRemindInterval(2) // default 1
+            .setShowLaterButton(true) // default true
+            .setDebug(false) // default false
+            .setOnClickButtonListener { which ->
+                //This works on Remind me later button and No,Thanks
+            }
+            .monitor()
+
+        // Show a dialog if meets conditions
+
+        // Show a dialog if meets conditions
+        AppRate.showRateDialogIfMeetsConditions(this)
 
     }
 

@@ -14,8 +14,8 @@ android {
         applicationId "com.adroidapp.abilitytohelp"
         minSdk 21
         targetSdk 34
-        versionCode 3
-        versionName "1.0.2"
+        versionCode 4
+        versionName "1.0.3"
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
         buildConfigField("String", "GEMINI_AI", "\"" + properties['API_KEY']+"\"")
         buildConfigField("String","BANNER_ID","\"" + properties['BANNER_ID']+"\"")
@@ -94,8 +94,13 @@ dependencies {
     //Parse SDK
     implementation ("com.github.parse-community.Parse-SDK-Android:parse:4.3.0")
 
+    //EMoji picker - native
     implementation "androidx.emoji2:emoji2-emojipicker:1.4.0"
+    //Circular imageview
     implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    //Rate-us dialog
+    implementation "com.github.hotchemi:android-rate:1.0.1"
 }
 
 repositories {

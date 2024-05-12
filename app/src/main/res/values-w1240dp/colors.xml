@@ -9,6 +9,7 @@
     <color name="colorWrong">#ed1725</color>
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorBlack">#000000</color>
+    <color name="light">#1A000000</color>
     <!--<color name="colorTheme">#D2FFEB3B</color>-->
     <color name="colorTheme">#FFFFFF</color>
     <color name="colorBlue">#056336</color>
@@ -16,6 +17,7 @@
     <color name="purple">#B349FF</color>
     <color name="light_blue">#38BDF2</color>
     <color name="ios_blue">#0a84ff</color>
+    <color name="ios_blue_light">#4D0a84ff</color>
     <color name="pink">#F2357B</color>
     <color name="greenish_yellow">#FFC928</color>
     <color name="brownish_yellow">#B28500</color>
