@@ -2,6 +2,7 @@ package com.androidapp.abilitytohelp.network
 
 import com.androidapp.abilitytohelp.model.AbbreviationsResponse
 import com.androidapp.abilitytohelp.model.AntonymsSynonymsResponse
+import com.androidapp.abilitytohelp.model.ConvoResponse
 import com.androidapp.abilitytohelp.model.DictionaryResponse
 import com.androidapp.abilitytohelp.model.DictonaryResult
 import com.androidapp.abilitytohelp.model.LiteratureResponse
@@ -389,6 +390,32 @@ class Repository(val dataApi: RestApi) {
                 if (responseBody != null && response.code() == 200) {
                     // Check if the response body is not empty
                     if (responseBody.result.isNotEmpty()) {
+                        return NetworkResources.success(responseBody)
+                    } else {
+                        return NetworkResources.error("No data!")
+                    }
+                } else {
+                    return NetworkResources.error("No data!")
+                }
+            } else {
+                return NetworkResources.error(response.message())
+            }
+        } catch (e: Exception) {
+            return NetworkResources.error(e.message!!)
+        }
+    }
+    suspend fun getBasicConversationList(): NetworkResources<ConvoResponse> {
+        try {
+            val response = dataApi.getBasicConvo(
+                "https://parseapi.back4app.com/classes/BasicConversation",
+                "zlB2X4kOFTPRWS7pZov1TpYppn3aATx0D7Jl7Rw3",
+                "GydDLwYtELP4dC0P3jY7wJQbDbJn6bfWr5avWQsd"
+            )
+            if (response.isSuccessful) {
+                val responseBody = response.body()
+                if (responseBody != null && response.code() == 200) {
+                    // Check if the response body is not empty
+                    if (!responseBody.results.isNullOrEmpty()) {
                         return NetworkResources.success(responseBody)
                     } else {
                         return NetworkResources.error("No data!")

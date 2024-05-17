@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.androidapp.abilitytohelp.model.AbbreviationsResponse
 import com.androidapp.abilitytohelp.model.AntonymsSynonymsResponse
+import com.androidapp.abilitytohelp.model.ConvoResponse
 import com.androidapp.abilitytohelp.model.DictionaryResponse
 import com.androidapp.abilitytohelp.model.LiteratureResponse
 import com.androidapp.abilitytohelp.model.PartOfSpeechResponse
@@ -52,6 +53,9 @@ class FunActivityViewModel : ViewModel(){
 
     private var phrasesApiResponse = MutableLiveData<NetworkResources<PhrasesResponse>>()
     var phrasesResponse : LiveData<NetworkResources<PhrasesResponse>> = phrasesApiResponse
+
+    private var basicApiConvoResponse = MutableLiveData<NetworkResources<ConvoResponse>>()
+    var basicConvoResponse : LiveData<NetworkResources<ConvoResponse>> = basicApiConvoResponse
 
     init {
         repository = NetworkUtil.provideRepository()
@@ -163,5 +167,16 @@ class FunActivityViewModel : ViewModel(){
 
     fun getPhraseObserver() : LiveData<NetworkResources<PhrasesResponse>>{
         return phrasesResponse
+    }
+
+    fun getBasicConversationList() {
+        basicApiConvoResponse.value = NetworkResources.loading()
+        viewModelScope.launch {
+            basicApiConvoResponse.value = repository?.getBasicConversationList()
+        }
+    }
+
+    fun getBasicConversationListObserver() : LiveData<NetworkResources<ConvoResponse>>{
+        return basicConvoResponse
     }
 }

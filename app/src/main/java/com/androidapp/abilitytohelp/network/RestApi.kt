@@ -2,6 +2,7 @@ package com.androidapp.abilitytohelp.network
 
 import com.androidapp.abilitytohelp.model.AbbreviationsResponse
 import com.androidapp.abilitytohelp.model.AntonymsSynonymsResponse
+import com.androidapp.abilitytohelp.model.ConvoResponse
 import com.androidapp.abilitytohelp.model.LiteratureResponse
 import com.androidapp.abilitytohelp.model.PartOfSpeechResponse
 import com.androidapp.abilitytohelp.model.PeriodicElementResponse
@@ -96,4 +97,11 @@ interface RestApi {
         @Query("phrase") phrase: String,
         @Query("format") format: String
     ): Response<JsonObject>
+
+    @GET
+    suspend fun getBasicConvo(
+        @Url baseUrl: String,
+        @Header("X-Parse-Application-Id") appId: String,
+        @Header("X-Parse-REST-API-Key") apiKey: String
+    ) : Response<ConvoResponse>
 }
