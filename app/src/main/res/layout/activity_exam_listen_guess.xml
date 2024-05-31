@@ -90,38 +90,46 @@
 
         </RelativeLayout>
 
-    <RelativeLayout
-        android:id="@+id/llQuestion"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/rltRecycle"
-        android:layout_below="@+id/rltTop"
-        android:orientation="vertical"
-        android:layout_margin="2dp">
+        <RelativeLayout
+            android:id="@+id/llQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/rltRecycle"
+            android:layout_below="@+id/rltTop"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="2dp"
+            android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/iVQuestion"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:onClick="onClickSound"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"/>
+            <ImageView
+                android:id="@+id/iVQuestion"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:onClick="onClickSound" />
 
-        <TextView
-            android:id="@+id/tvName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:text="@string/app_name"
-            android:fontFamily="sans-serif"
-            android:textColor="@color/colorBlack"
-            android:textAlignment="center"
-            android:textStyle="bold"
-            android:layout_marginBottom="20dp"
-            android:textSize="17dp" />
+            <ProgressBar
+                android:id="@+id/loading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" />
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/app_name"
+                android:textAlignment="center"
+                android:textColor="@color/colorBlack"
+                android:textSize="17dp"
+                android:textStyle="bold" />
 
-    </RelativeLayout>
+        </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/rltRecycle"

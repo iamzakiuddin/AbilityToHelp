@@ -1,0 +1,11 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- The shape of the drawable -->
+    <solid android:color="@android:color/transparent"/>
+
+    <!-- Define the corners radius if needed -->
+
+    <!-- Define the rectangle border -->
+    <stroke
+        android:width="5dp"
+        android:color="#D3D3D3"/> <!-- Light grey color -->
+</shape>

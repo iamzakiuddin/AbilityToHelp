@@ -118,8 +118,8 @@ public class MainActivity extends AppCompatActivity implements CallbackListener,
     private void initDefine() {
         back = findViewById(R.id.back);
         rvCategory=findViewById(R.id.rvCategory);
-        arrOfCategory = new int[]{R.drawable.card_one, R.drawable.card_two, R.drawable.card_three, R.drawable.card_four};
-        categoriesTitle = new int[]{R.string.kids_learning, R.string.video_learning, R.string.look_and_choose, R.string.listen_and_guess};
+        arrOfCategory = new int[]{R.drawable.card_one, R.drawable.card_two, R.drawable.card_three, R.drawable.card_four, R.drawable.basic_convo};
+        categoriesTitle = new int[]{R.string.kids_learning, R.string.video_learning, R.string.look_and_choose, R.string.listen_and_guess,R.string.basic_convo};
         setRvAdapter();
     }
 
@@ -134,7 +134,6 @@ public class MainActivity extends AppCompatActivity implements CallbackListener,
     int position = 0;
     private void setRvAdapter() {
         GridLayoutManager gridLayoutManager = new GridLayoutManager(context, 2, GridLayoutManager.VERTICAL, false);
-        //LinearLayoutManager linearLayoutManager=new LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false);
         rvCategory.setLayoutManager(gridLayoutManager);
         homeAdapter=new HomeAdapter(context, arrOfCategory,categoriesTitle, new HomeAdapter.onClickMain() {
             @Override
@@ -189,6 +188,12 @@ public class MainActivity extends AppCompatActivity implements CallbackListener,
                 Intent intent4 = new Intent(context, HomeActivity.class);
                 intent4.putExtra("Type", 3);
                 context.startActivity(intent4);
+                overridePendingTransition(R.anim.enter_anim,R.anim.exit);
+                break;
+            case 4:
+                Intent intent5 = new Intent(context, BasicConversationActivity.class);
+                intent5.putExtra("Type", 4);
+                context.startActivity(intent5);
                 overridePendingTransition(R.anim.enter_anim,R.anim.exit);
                 break;
         }

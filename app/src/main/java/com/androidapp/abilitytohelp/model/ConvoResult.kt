@@ -13,5 +13,6 @@ data class ConvoResult(
     @SerializedName("spanish")
     val spanish: String,
     @SerializedName("updatedAt")
-    val updatedAt: String
+    val updatedAt: String,
+    var isSelected: Boolean = false
 )

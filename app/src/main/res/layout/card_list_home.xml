@@ -27,8 +27,8 @@
         <ImageView
             android:id="@+id/imgHomeCategory"
             android:layout_width="180dp"
-            android:layout_height="165.0dip"
-            android:padding="4.0dip"
+            android:layout_height="165dp"
+            android:padding="4dp"
             android:scaleType="fitXY"
             />
         <TextView

@@ -22,9 +22,11 @@ import com.androidapp.abilitytohelp.customclasses.AppControl;
 import com.androidapp.abilitytohelp.customclasses.Constant;
 import com.androidapp.abilitytohelp.interfaces.CorrectAnswerCallback;
 import com.androidapp.abilitytohelp.model.LearningDataModel;
+import com.androidapp.abilitytohelp.model.parseapismodels.Result;
 import com.androidapp.abilitytohelp.utils.Utils;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Naynesh Patel on 06-Feb-19.
@@ -33,11 +35,11 @@ public class ExamQuestionAdapter extends RecyclerView.Adapter<ExamQuestionAdapte
 
 
     Context context;
-    ArrayList<LearningDataModel> examQuestionAnswerList;
-    LearningDataModel learningDataModel;
+    List<Result> examQuestionAnswerList;
+    Result learningDataModel;
     CorrectAnswerCallback answerCallback;
 
-    public ExamQuestionAdapter(Context context, ArrayList<LearningDataModel> examQuestionAnswerList, LearningDataModel learningDataModel, CorrectAnswerCallback answerCallback) {
+    public ExamQuestionAdapter(Context context, List<Result> examQuestionAnswerList, Result learningDataModel, CorrectAnswerCallback answerCallback) {
         this.context = context;
         this.examQuestionAnswerList = examQuestionAnswerList;
         this.learningDataModel = learningDataModel;
@@ -78,12 +80,12 @@ public class ExamQuestionAdapter extends RecyclerView.Adapter<ExamQuestionAdapte
 
 
     public void onBindViewHolder(@NonNull final ViewHolder viewHolder, final int i) {
-        viewHolder.tVExamAnswer.setText(examQuestionAnswerList.get(i).showTitle);
+        viewHolder.tVExamAnswer.setText(examQuestionAnswerList.get(i).getTitle());
         viewHolder.cardView.startAnimation(AnimationUtils.loadAnimation(context, R.anim.bubble_anim));
         viewHolder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (learningDataModel.showTitle.equals(examQuestionAnswerList.get(i).showTitle)) {
+                if (learningDataModel.getTitle().equals(examQuestionAnswerList.get(i).getTitle())) {
                     Toast.makeText(context, "Correct Answer", Toast.LENGTH_SHORT).show();
                     viewHolder.lloutExamAnswer.setBackgroundColor(context.getResources().getColor(R.color.colorCorrect));
                     if (Utils.getPref(Constant.SOUND,true)) {

@@ -29,14 +29,14 @@ public class AppControl extends Application {
             @Override
             public void onInit(int status) {
                 if (status == TextToSpeech.SUCCESS){
-                    textToSpeech.setLanguage(Locale.UK);
+                    textToSpeech.setLanguage(Locale.US);
 //                    textToSpeech.setLanguage(new Locale("tr","TR"));
 
                 }
             }
 
         });
-        textToSpeech.setSpeechRate(0.3f);
+        textToSpeech.setSpeechRate(1.0f);
         Parse.initialize(new Parse.Configuration.Builder(this)
                 .applicationId(getString(R.string.PARSE_APP_ID))
                 .clientKey(getString(R.string.PARSE_CLIENT_KEY))

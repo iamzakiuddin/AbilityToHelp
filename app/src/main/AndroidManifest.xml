@@ -16,7 +16,11 @@
         <intent>
             <action android:name="android.intent.action.TTS_SERVICE" />
         </intent>
+        <intent>
+            <action android:name="android.speech.RecognitionService" />
+        </intent>
     </queries>
+
 
     <application
         android:name=".customclasses.AppControl"
@@ -34,7 +38,9 @@
         android:usesCleartextTraffic="true">
         <activity
             android:name=".activity.BasicConversationActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".activity.profile.AuthenticationActivity"
             android:exported="false"

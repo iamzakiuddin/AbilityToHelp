@@ -13,6 +13,7 @@ import com.androidapp.abilitytohelp.model.PhrasesResult
 import com.androidapp.abilitytohelp.model.RiddleResponse
 import com.androidapp.abilitytohelp.model.SynonymsResponse
 import com.androidapp.abilitytohelp.model.WordImageResponse
+import com.androidapp.abilitytohelp.model.parseapismodels.ParseApiResponse
 import com.google.gson.JsonObject
 import org.json.JSONException
 import java.io.IOException
@@ -404,11 +405,684 @@ class Repository(val dataApi: RestApi) {
             return NetworkResources.error(e.message!!)
         }
     }
+
     suspend fun getBasicConversationList(): NetworkResources<ConvoResponse> {
         try {
             val response = dataApi.getBasicConvo(
-                "https://parseapi.back4app.com/classes/BasicConversation",
+                baseUrl = "https://parseapi.back4app.com/classes/BasicConversation",
+                appId = "zlB2X4kOFTPRWS7pZov1TpYppn3aATx0D7Jl7Rw3",
+                apiKey = "GydDLwYtELP4dC0P3jY7wJQbDbJn6bfWr5avWQsd"
+            )
+            if (response.isSuccessful) {
+                val responseBody = response.body()
+                if (responseBody != null && response.code() == 200) {
+                    // Check if the response body is not empty
+                    if (!responseBody.results.isNullOrEmpty()) {
+                        return NetworkResources.success(responseBody)
+                    } else {
+                        return NetworkResources.error("No data!")
+                    }
+                } else {
+                    return NetworkResources.error("No data!")
+                }
+            } else {
+                return NetworkResources.error(response.message())
+            }
+        } catch (e: Exception) {
+            return NetworkResources.error(e.message!!)
+        }
+    }
+
+    suspend fun getCategories(): NetworkResources<ParseApiResponse> {
+        try {
+            val response = dataApi.getCategories(
+                appId =
                 "zlB2X4kOFTPRWS7pZov1TpYppn3aATx0D7Jl7Rw3",
+                apiKey =
+                "GydDLwYtELP4dC0P3jY7wJQbDbJn6bfWr5avWQsd"
+            )
+            if (response.isSuccessful) {
+                val responseBody = response.body()
+                if (responseBody != null && response.code() == 200) {
+                    // Check if the response body is not empty
+                    if (!responseBody.results.isNullOrEmpty()) {
+                        return NetworkResources.success(responseBody)
+                    } else {
+                        return NetworkResources.error("No data!")
+                    }
+                } else {
+                    return NetworkResources.error("No data!")
+                }
+            } else {
+                return NetworkResources.error(response.message())
+            }
+        } catch (e: Exception) {
+            return NetworkResources.error(e.message!!)
+        }
+    }
+
+    suspend fun hitParseApi(endPoint:String): NetworkResources<ParseApiResponse> {
+        try {
+            val response = dataApi.hitParseApi("https://parseapi.back4app.com/classes/$endPoint",
+                appId =
+                "zlB2X4kOFTPRWS7pZov1TpYppn3aATx0D7Jl7Rw3",
+                apiKey =
+                "GydDLwYtELP4dC0P3jY7wJQbDbJn6bfWr5avWQsd"
+            )
+            if (response.isSuccessful) {
+                val responseBody = response.body()
+                if (responseBody != null && response.code() == 200) {
+                    // Check if the response body is not empty
+                    if (!responseBody.results.isNullOrEmpty()) {
+                        return NetworkResources.success(responseBody)
+                    } else {
+                        return NetworkResources.error("No data!")
+                    }
+                } else {
+                    return NetworkResources.error("No data!")
+                }
+            } else {
+                return NetworkResources.error(response.message())
+            }
+        } catch (e: Exception) {
+            return NetworkResources.error(e.message!!)
+        }
+    }
+
+    suspend fun getNumbers(): NetworkResources<ParseApiResponse> {
+        try {
+            val response = dataApi.getNumbers(
+                appId =
+                "zlB2X4kOFTPRWS7pZov1TpYppn3aATx0D7Jl7Rw3",
+                apiKey =
+                "GydDLwYtELP4dC0P3jY7wJQbDbJn6bfWr5avWQsd"
+            )
+            if (response.isSuccessful) {
+                val responseBody = response.body()
+                if (responseBody != null && response.code() == 200) {
+                    // Check if the response body is not empty
+                    if (!responseBody.results.isNullOrEmpty()) {
+                        return NetworkResources.success(responseBody)
+                    } else {
+                        return NetworkResources.error("No data!")
+                    }
+                } else {
+                    return NetworkResources.error("No data!")
+                }
+            } else {
+                return NetworkResources.error(response.message())
+            }
+        } catch (e: Exception) {
+            return NetworkResources.error(e.message!!)
+        }
+    }
+
+    suspend fun getColors(): NetworkResources<ParseApiResponse> {
+        try {
+            val response = dataApi.getColors(
+                appId =
+                "zlB2X4kOFTPRWS7pZov1TpYppn3aATx0D7Jl7Rw3",
+                apiKey =
+                "GydDLwYtELP4dC0P3jY7wJQbDbJn6bfWr5avWQsd"
+            )
+            if (response.isSuccessful) {
+                val responseBody = response.body()
+                if (responseBody != null && response.code() == 200) {
+                    // Check if the response body is not empty
+                    if (!responseBody.results.isNullOrEmpty()) {
+                        return NetworkResources.success(responseBody)
+                    } else {
+                        return NetworkResources.error("No data!")
+                    }
+                } else {
+                    return NetworkResources.error("No data!")
+                }
+            } else {
+                return NetworkResources.error(response.message())
+            }
+        } catch (e: Exception) {
+            return NetworkResources.error(e.message!!)
+        }
+    }
+
+    suspend fun getShapes(): NetworkResources<ParseApiResponse> {
+        try {
+            val response = dataApi.getShapes(
+                appId =
+                "zlB2X4kOFTPRWS7pZov1TpYppn3aATx0D7Jl7Rw3",
+                apiKey =
+                "GydDLwYtELP4dC0P3jY7wJQbDbJn6bfWr5avWQsd"
+            )
+            if (response.isSuccessful) {
+                val responseBody = response.body()
+                if (responseBody != null && response.code() == 200) {
+                    // Check if the response body is not empty
+                    if (!responseBody.results.isNullOrEmpty()) {
+                        return NetworkResources.success(responseBody)
+                    } else {
+                        return NetworkResources.error("No data!")
+                    }
+                } else {
+                    return NetworkResources.error("No data!")
+                }
+            } else {
+                return NetworkResources.error(response.message())
+            }
+        } catch (e: Exception) {
+            return NetworkResources.error(e.message!!)
+        }
+    }
+
+    suspend fun getAnimals(): NetworkResources<ParseApiResponse> {
+        try {
+            val response = dataApi.getAnimals(
+                appId =
+                "zlB2X4kOFTPRWS7pZov1TpYppn3aATx0D7Jl7Rw3",
+                apiKey =
+                "GydDLwYtELP4dC0P3jY7wJQbDbJn6bfWr5avWQsd"
+            )
+            if (response.isSuccessful) {
+                val responseBody = response.body()
+                if (responseBody != null && response.code() == 200) {
+                    // Check if the response body is not empty
+                    if (!responseBody.results.isNullOrEmpty()) {
+                        return NetworkResources.success(responseBody)
+                    } else {
+                        return NetworkResources.error("No data!")
+                    }
+                } else {
+                    return NetworkResources.error("No data!")
+                }
+            } else {
+                return NetworkResources.error(response.message())
+            }
+        } catch (e: Exception) {
+            return NetworkResources.error(e.message!!)
+        }
+    }
+
+    suspend fun getBirds(): NetworkResources<ParseApiResponse> {
+        try {
+            val response = dataApi.getBirds(
+                appId =
+                "zlB2X4kOFTPRWS7pZov1TpYppn3aATx0D7Jl7Rw3",
+                apiKey =
+                "GydDLwYtELP4dC0P3jY7wJQbDbJn6bfWr5avWQsd"
+            )
+            if (response.isSuccessful) {
+                val responseBody = response.body()
+                if (responseBody != null && response.code() == 200) {
+                    // Check if the response body is not empty
+                    if (!responseBody.results.isNullOrEmpty()) {
+                        return NetworkResources.success(responseBody)
+                    } else {
+                        return NetworkResources.error("No data!")
+                    }
+                } else {
+                    return NetworkResources.error("No data!")
+                }
+            } else {
+                return NetworkResources.error(response.message())
+            }
+        } catch (e: Exception) {
+            return NetworkResources.error(e.message!!)
+        }
+    }
+
+    suspend fun getFlowers(): NetworkResources<ParseApiResponse> {
+        try {
+            val response = dataApi.getFlowers(
+                appId =
+                "zlB2X4kOFTPRWS7pZov1TpYppn3aATx0D7Jl7Rw3",
+                apiKey =
+                "GydDLwYtELP4dC0P3jY7wJQbDbJn6bfWr5avWQsd"
+            )
+            if (response.isSuccessful) {
+                val responseBody = response.body()
+                if (responseBody != null && response.code() == 200) {
+                    // Check if the response body is not empty
+                    if (!responseBody.results.isNullOrEmpty()) {
+                        return NetworkResources.success(responseBody)
+                    } else {
+                        return NetworkResources.error("No data!")
+                    }
+                } else {
+                    return NetworkResources.error("No data!")
+                }
+            } else {
+                return NetworkResources.error(response.message())
+            }
+        } catch (e: Exception) {
+            return NetworkResources.error(e.message!!)
+        }
+    }
+
+    suspend fun getFruits(): NetworkResources<ParseApiResponse> {
+        try {
+            val response = dataApi.getFruits(
+                appId =
+                "zlB2X4kOFTPRWS7pZov1TpYppn3aATx0D7Jl7Rw3",
+                apiKey =
+                "GydDLwYtELP4dC0P3jY7wJQbDbJn6bfWr5avWQsd"
+            )
+            if (response.isSuccessful) {
+                val responseBody = response.body()
+                if (responseBody != null && response.code() == 200) {
+                    // Check if the response body is not empty
+                    if (!responseBody.results.isNullOrEmpty()) {
+                        return NetworkResources.success(responseBody)
+                    } else {
+                        return NetworkResources.error("No data!")
+                    }
+                } else {
+                    return NetworkResources.error("No data!")
+                }
+            } else {
+                return NetworkResources.error(response.message())
+            }
+        } catch (e: Exception) {
+            return NetworkResources.error(e.message!!)
+        }
+    }
+
+    suspend fun getMonths(): NetworkResources<ParseApiResponse> {
+        try {
+            val response = dataApi.getMonths(
+                appId =
+                "zlB2X4kOFTPRWS7pZov1TpYppn3aATx0D7Jl7Rw3",
+                apiKey =
+                "GydDLwYtELP4dC0P3jY7wJQbDbJn6bfWr5avWQsd"
+            )
+            if (response.isSuccessful) {
+                val responseBody = response.body()
+                if (responseBody != null && response.code() == 200) {
+                    // Check if the response body is not empty
+                    if (!responseBody.results.isNullOrEmpty()) {
+                        return NetworkResources.success(responseBody)
+                    } else {
+                        return NetworkResources.error("No data!")
+                    }
+                } else {
+                    return NetworkResources.error("No data!")
+                }
+            } else {
+                return NetworkResources.error(response.message())
+            }
+        } catch (e: Exception) {
+            return NetworkResources.error(e.message!!)
+        }
+    }
+
+    suspend fun getVegetables(): NetworkResources<ParseApiResponse> {
+        try {
+            val response = dataApi.getVegetables(
+                appId =
+                "zlB2X4kOFTPRWS7pZov1TpYppn3aATx0D7Jl7Rw3",
+                apiKey =
+                "GydDLwYtELP4dC0P3jY7wJQbDbJn6bfWr5avWQsd"
+            )
+            if (response.isSuccessful) {
+                val responseBody = response.body()
+                if (responseBody != null && response.code() == 200) {
+                    // Check if the response body is not empty
+                    if (!responseBody.results.isNullOrEmpty()) {
+                        return NetworkResources.success(responseBody)
+                    } else {
+                        return NetworkResources.error("No data!")
+                    }
+                } else {
+                    return NetworkResources.error("No data!")
+                }
+            } else {
+                return NetworkResources.error(response.message())
+            }
+        } catch (e: Exception) {
+            return NetworkResources.error(e.message!!)
+        }
+    }
+
+    suspend fun getBodyParts(): NetworkResources<ParseApiResponse> {
+        try {
+            val response = dataApi.getBodyParts(
+                appId =
+                "zlB2X4kOFTPRWS7pZov1TpYppn3aATx0D7Jl7Rw3",
+                apiKey =
+                "GydDLwYtELP4dC0P3jY7wJQbDbJn6bfWr5avWQsd"
+            )
+            if (response.isSuccessful) {
+                val responseBody = response.body()
+                if (responseBody != null && response.code() == 200) {
+                    // Check if the response body is not empty
+                    if (!responseBody.results.isNullOrEmpty()) {
+                        return NetworkResources.success(responseBody)
+                    } else {
+                        return NetworkResources.error("No data!")
+                    }
+                } else {
+                    return NetworkResources.error("No data!")
+                }
+            } else {
+                return NetworkResources.error(response.message())
+            }
+        } catch (e: Exception) {
+            return NetworkResources.error(e.message!!)
+        }
+    }
+
+    suspend fun getClothes(): NetworkResources<ParseApiResponse> {
+        try {
+            val response = dataApi.getClothes(
+                appId =
+                "zlB2X4kOFTPRWS7pZov1TpYppn3aATx0D7Jl7Rw3",
+                apiKey =
+                "GydDLwYtELP4dC0P3jY7wJQbDbJn6bfWr5avWQsd"
+            )
+            if (response.isSuccessful) {
+                val responseBody = response.body()
+                if (responseBody != null && response.code() == 200) {
+                    // Check if the response body is not empty
+                    if (!responseBody.results.isNullOrEmpty()) {
+                        return NetworkResources.success(responseBody)
+                    } else {
+                        return NetworkResources.error("No data!")
+                    }
+                } else {
+                    return NetworkResources.error("No data!")
+                }
+            } else {
+                return NetworkResources.error(response.message())
+            }
+        } catch (e: Exception) {
+            return NetworkResources.error(e.message!!)
+        }
+    }
+
+    suspend fun getCountry(): NetworkResources<ParseApiResponse> {
+        try {
+            val response = dataApi.getCountry(
+                appId =
+                "zlB2X4kOFTPRWS7pZov1TpYppn3aATx0D7Jl7Rw3",
+                apiKey =
+                "GydDLwYtELP4dC0P3jY7wJQbDbJn6bfWr5avWQsd"
+            )
+            if (response.isSuccessful) {
+                val responseBody = response.body()
+                if (responseBody != null && response.code() == 200) {
+                    // Check if the response body is not empty
+                    if (!responseBody.results.isNullOrEmpty()) {
+                        return NetworkResources.success(responseBody)
+                    } else {
+                        return NetworkResources.error("No data!")
+                    }
+                } else {
+                    return NetworkResources.error("No data!")
+                }
+            } else {
+                return NetworkResources.error(response.message())
+            }
+        } catch (e: Exception) {
+            return NetworkResources.error(e.message!!)
+        }
+    }
+
+    suspend fun getFoods(): NetworkResources<ParseApiResponse> {
+        try {
+            val response = dataApi.getFoods(
+                appId =
+                "zlB2X4kOFTPRWS7pZov1TpYppn3aATx0D7Jl7Rw3",
+                apiKey =
+                "GydDLwYtELP4dC0P3jY7wJQbDbJn6bfWr5avWQsd"
+            )
+            if (response.isSuccessful) {
+                val responseBody = response.body()
+                if (responseBody != null && response.code() == 200) {
+                    // Check if the response body is not empty
+                    if (!responseBody.results.isNullOrEmpty()) {
+                        return NetworkResources.success(responseBody)
+                    } else {
+                        return NetworkResources.error("No data!")
+                    }
+                } else {
+                    return NetworkResources.error("No data!")
+                }
+            } else {
+                return NetworkResources.error(response.message())
+            }
+        } catch (e: Exception) {
+            return NetworkResources.error(e.message!!)
+        }
+    }
+
+    suspend fun getGeometry(): NetworkResources<ParseApiResponse> {
+        try {
+            val response = dataApi.getGeometry(
+                appId =
+                "zlB2X4kOFTPRWS7pZov1TpYppn3aATx0D7Jl7Rw3",
+                apiKey =
+                "GydDLwYtELP4dC0P3jY7wJQbDbJn6bfWr5avWQsd"
+            )
+            if (response.isSuccessful) {
+                val responseBody = response.body()
+                if (responseBody != null && response.code() == 200) {
+                    // Check if the response body is not empty
+                    if (!responseBody.results.isNullOrEmpty()) {
+                        return NetworkResources.success(responseBody)
+                    } else {
+                        return NetworkResources.error("No data!")
+                    }
+                } else {
+                    return NetworkResources.error("No data!")
+                }
+            } else {
+                return NetworkResources.error(response.message())
+            }
+        } catch (e: Exception) {
+            return NetworkResources.error(e.message!!)
+        }
+    }
+
+    suspend fun getHouses(): NetworkResources<ParseApiResponse> {
+        try {
+            val response = dataApi.getHouses(
+                appId =
+                "zlB2X4kOFTPRWS7pZov1TpYppn3aATx0D7Jl7Rw3",
+                apiKey =
+                "GydDLwYtELP4dC0P3jY7wJQbDbJn6bfWr5avWQsd"
+            )
+            if (response.isSuccessful) {
+                val responseBody = response.body()
+                if (responseBody != null && response.code() == 200) {
+                    // Check if the response body is not empty
+                    if (!responseBody.results.isNullOrEmpty()) {
+                        return NetworkResources.success(responseBody)
+                    } else {
+                        return NetworkResources.error("No data!")
+                    }
+                } else {
+                    return NetworkResources.error("No data!")
+                }
+            } else {
+                return NetworkResources.error(response.message())
+            }
+        } catch (e: Exception) {
+            return NetworkResources.error(e.message!!)
+        }
+    }
+
+    suspend fun getJobs(): NetworkResources<ParseApiResponse> {
+        try {
+            val response = dataApi.getJobs(
+                appId =
+                "zlB2X4kOFTPRWS7pZov1TpYppn3aATx0D7Jl7Rw3",
+                apiKey =
+                "GydDLwYtELP4dC0P3jY7wJQbDbJn6bfWr5avWQsd"
+            )
+            if (response.isSuccessful) {
+                val responseBody = response.body()
+                if (responseBody != null && response.code() == 200) {
+                    // Check if the response body is not empty
+                    if (!responseBody.results.isNullOrEmpty()) {
+                        return NetworkResources.success(responseBody)
+                    } else {
+                        return NetworkResources.error("No data!")
+                    }
+                } else {
+                    return NetworkResources.error("No data!")
+                }
+            } else {
+                return NetworkResources.error(response.message())
+            }
+        } catch (e: Exception) {
+            return NetworkResources.error(e.message!!)
+        }
+    }
+
+    suspend fun getSchool(): NetworkResources<ParseApiResponse> {
+        try {
+            val response = dataApi.getSchool(
+                appId =
+                "zlB2X4kOFTPRWS7pZov1TpYppn3aATx0D7Jl7Rw3",
+                apiKey =
+                "GydDLwYtELP4dC0P3jY7wJQbDbJn6bfWr5avWQsd"
+            )
+            if (response.isSuccessful) {
+                val responseBody = response.body()
+                if (responseBody != null && response.code() == 200) {
+                    // Check if the response body is not empty
+                    if (!responseBody.results.isNullOrEmpty()) {
+                        return NetworkResources.success(responseBody)
+                    } else {
+                        return NetworkResources.error("No data!")
+                    }
+                } else {
+                    return NetworkResources.error("No data!")
+                }
+            } else {
+                return NetworkResources.error(response.message())
+            }
+        } catch (e: Exception) {
+            return NetworkResources.error(e.message!!)
+        }
+    }
+
+    suspend fun getSports(): NetworkResources<ParseApiResponse> {
+        try {
+            val response = dataApi.getSports(
+                appId =
+                "zlB2X4kOFTPRWS7pZov1TpYppn3aATx0D7Jl7Rw3",
+                apiKey =
+                "GydDLwYtELP4dC0P3jY7wJQbDbJn6bfWr5avWQsd"
+            )
+            if (response.isSuccessful) {
+                val responseBody = response.body()
+                if (responseBody != null && response.code() == 200) {
+                    // Check if the response body is not empty
+                    if (!responseBody.results.isNullOrEmpty()) {
+                        return NetworkResources.success(responseBody)
+                    } else {
+                        return NetworkResources.error("No data!")
+                    }
+                } else {
+                    return NetworkResources.error("No data!")
+                }
+            } else {
+                return NetworkResources.error(response.message())
+            }
+        } catch (e: Exception) {
+            return NetworkResources.error(e.message!!)
+        }
+    }
+
+    suspend fun getVehicles(): NetworkResources<ParseApiResponse> {
+        try {
+            val response = dataApi.getVehicles(
+                appId =
+                "zlB2X4kOFTPRWS7pZov1TpYppn3aATx0D7Jl7Rw3",
+                apiKey =
+                "GydDLwYtELP4dC0P3jY7wJQbDbJn6bfWr5avWQsd"
+            )
+            if (response.isSuccessful) {
+                val responseBody = response.body()
+                if (responseBody != null && response.code() == 200) {
+                    // Check if the response body is not empty
+                    if (!responseBody.results.isNullOrEmpty()) {
+                        return NetworkResources.success(responseBody)
+                    } else {
+                        return NetworkResources.error("No data!")
+                    }
+                } else {
+                    return NetworkResources.error("No data!")
+                }
+            } else {
+                return NetworkResources.error(response.message())
+            }
+        } catch (e: Exception) {
+            return NetworkResources.error(e.message!!)
+        }
+    }
+
+    suspend fun getDailyRoutine(): NetworkResources<ParseApiResponse> {
+        try {
+            val response = dataApi.getDailyRoutine(
+                appId =
+                "zlB2X4kOFTPRWS7pZov1TpYppn3aATx0D7Jl7Rw3",
+                apiKey =
+                "GydDLwYtELP4dC0P3jY7wJQbDbJn6bfWr5avWQsd"
+            )
+            if (response.isSuccessful) {
+                val responseBody = response.body()
+                if (responseBody != null && response.code() == 200) {
+                    // Check if the response body is not empty
+                    if (!responseBody.results.isNullOrEmpty()) {
+                        return NetworkResources.success(responseBody)
+                    } else {
+                        return NetworkResources.error("No data!")
+                    }
+                } else {
+                    return NetworkResources.error("No data!")
+                }
+            } else {
+                return NetworkResources.error(response.message())
+            }
+        } catch (e: Exception) {
+            return NetworkResources.error(e.message!!)
+        }
+    }
+
+    suspend fun getFaceExpressions(): NetworkResources<ParseApiResponse> {
+        try {
+            val response = dataApi.getFaceExpressions(
+                appId =
+                "zlB2X4kOFTPRWS7pZov1TpYppn3aATx0D7Jl7Rw3",
+                apiKey =
+                "GydDLwYtELP4dC0P3jY7wJQbDbJn6bfWr5avWQsd"
+            )
+            if (response.isSuccessful) {
+                val responseBody = response.body()
+                if (responseBody != null && response.code() == 200) {
+                    // Check if the response body is not empty
+                    if (!responseBody.results.isNullOrEmpty()) {
+                        return NetworkResources.success(responseBody)
+                    } else {
+                        return NetworkResources.error("No data!")
+                    }
+                } else {
+                    return NetworkResources.error("No data!")
+                }
+            } else {
+                return NetworkResources.error(response.message())
+            }
+        } catch (e: Exception) {
+            return NetworkResources.error(e.message!!)
+        }
+    }
+
+    suspend fun getAnimalHouses(): NetworkResources<ParseApiResponse> {
+        try {
+            val response = dataApi.getAnimalHouses(
+                appId =
+                "zlB2X4kOFTPRWS7pZov1TpYppn3aATx0D7Jl7Rw3",
+                apiKey =
                 "GydDLwYtELP4dC0P3jY7wJQbDbJn6bfWr5avWQsd"
             )
             if (response.isSuccessful) {

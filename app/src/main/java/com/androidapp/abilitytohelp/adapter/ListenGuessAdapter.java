@@ -18,6 +18,7 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.androidapp.abilitytohelp.interfaces.CorrectAnswerCallback;
+import com.androidapp.abilitytohelp.model.parseapismodels.Result;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.RequestOptions;
@@ -28,6 +29,7 @@ import com.androidapp.abilitytohelp.model.LearningDataModel;
 import com.androidapp.abilitytohelp.utils.Utils;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Naynesh Patel on 06-Feb-19.
@@ -36,11 +38,11 @@ public class ListenGuessAdapter extends RecyclerView.Adapter<ListenGuessAdapter.
 
 
     Context context;
-    ArrayList<LearningDataModel> examQuestionAnswerList;
-    LearningDataModel learningDataModel;
+    List<Result> examQuestionAnswerList;
+    Result learningDataModel;
     CorrectAnswerCallback answerCallback;
 
-    public ListenGuessAdapter(Context context, ArrayList<LearningDataModel> examQuestionAnswerList, LearningDataModel learningDataModel, CorrectAnswerCallback answerCallback) {
+    public ListenGuessAdapter(Context context, List<Result> examQuestionAnswerList, Result learningDataModel, CorrectAnswerCallback answerCallback) {
         this.context = context;
         this.examQuestionAnswerList = examQuestionAnswerList;
         this.learningDataModel = learningDataModel;
@@ -79,13 +81,13 @@ public class ListenGuessAdapter extends RecyclerView.Adapter<ListenGuessAdapter.
     }
 
     public void onBindViewHolder(@NonNull final ViewHolder viewHolder, final int i) {
-        Glide.with(context).load(examQuestionAnswerList.get(i).image).apply(new RequestOptions().diskCacheStrategy(DiskCacheStrategy.ALL)).into(viewHolder.iVExamAnswer);
+        Glide.with(context).load(examQuestionAnswerList.get(i).getImage().getUrl()).apply(new RequestOptions().diskCacheStrategy(DiskCacheStrategy.ALL)).into(viewHolder.iVExamAnswer);
         viewHolder.cardView.startAnimation(AnimationUtils.loadAnimation(context, R.anim.bubble_anim));
 
         viewHolder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (learningDataModel.showTitle.equals(examQuestionAnswerList.get(i).showTitle)) {
+                if (learningDataModel.getTitle().equals(examQuestionAnswerList.get(i).getTitle())) {
                     Toast.makeText(context, "Correct Answer", Toast.LENGTH_SHORT).show();
                     viewHolder.lloutExamAnswer.setBackgroundColor(context.getResources().getColor(R.color.colorCorrect));
                     if (Utils.getPref(Constant.SOUND,true)) {
