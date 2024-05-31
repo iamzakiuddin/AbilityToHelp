@@ -80,18 +80,6 @@
                 android:textColor="@color/colorBlack"
                 android:textSize="20sp" />
 
-            <Button
-                android:id="@+id/basicConvo"
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/button_bg"
-                android:fontFamily="@font/atma_semibold"
-                android:text="@string/basic_conversation"
-                android:textAllCaps="false"
-                android:textColor="@color/colorBlack"
-                android:textSize="20sp" />
-
 
         </LinearLayout>
     </ScrollView>

@@ -1,5 +1,6 @@
 package com.androidapp.abilitytohelp.network
 
+import com.androidapp.abilitytohelp.BuildConfig
 import com.androidapp.abilitytohelp.model.AbbreviationsResponse
 import com.androidapp.abilitytohelp.model.AntonymsSynonymsResponse
 import com.androidapp.abilitytohelp.model.ConvoResponse
@@ -410,8 +411,10 @@ class Repository(val dataApi: RestApi) {
         try {
             val response = dataApi.getBasicConvo(
                 baseUrl = "https://parseapi.back4app.com/classes/BasicConversation",
-                appId = "zlB2X4kOFTPRWS7pZov1TpYppn3aATx0D7Jl7Rw3",
-                apiKey = "GydDLwYtELP4dC0P3jY7wJQbDbJn6bfWr5avWQsd"
+                appId =
+                BuildConfig.PARSE_APP_ID,
+                apiKey =
+                BuildConfig.PARSE_API_KEY
             )
             if (response.isSuccessful) {
                 val responseBody = response.body()
@@ -437,9 +440,9 @@ class Repository(val dataApi: RestApi) {
         try {
             val response = dataApi.getCategories(
                 appId =
-                "zlB2X4kOFTPRWS7pZov1TpYppn3aATx0D7Jl7Rw3",
+                BuildConfig.PARSE_APP_ID,
                 apiKey =
-                "GydDLwYtELP4dC0P3jY7wJQbDbJn6bfWr5avWQsd"
+                BuildConfig.PARSE_API_KEY
             )
             if (response.isSuccessful) {
                 val responseBody = response.body()
@@ -465,9 +468,9 @@ class Repository(val dataApi: RestApi) {
         try {
             val response = dataApi.hitParseApi("https://parseapi.back4app.com/classes/$endPoint",
                 appId =
-                "zlB2X4kOFTPRWS7pZov1TpYppn3aATx0D7Jl7Rw3",
+                BuildConfig.PARSE_APP_ID,
                 apiKey =
-                "GydDLwYtELP4dC0P3jY7wJQbDbJn6bfWr5avWQsd"
+                BuildConfig.PARSE_API_KEY
             )
             if (response.isSuccessful) {
                 val responseBody = response.body()
@@ -493,9 +496,9 @@ class Repository(val dataApi: RestApi) {
         try {
             val response = dataApi.getNumbers(
                 appId =
-                "zlB2X4kOFTPRWS7pZov1TpYppn3aATx0D7Jl7Rw3",
+                BuildConfig.PARSE_APP_ID,
                 apiKey =
-                "GydDLwYtELP4dC0P3jY7wJQbDbJn6bfWr5avWQsd"
+                BuildConfig.PARSE_API_KEY
             )
             if (response.isSuccessful) {
                 val responseBody = response.body()
@@ -521,9 +524,9 @@ class Repository(val dataApi: RestApi) {
         try {
             val response = dataApi.getColors(
                 appId =
-                "zlB2X4kOFTPRWS7pZov1TpYppn3aATx0D7Jl7Rw3",
+                BuildConfig.PARSE_APP_ID,
                 apiKey =
-                "GydDLwYtELP4dC0P3jY7wJQbDbJn6bfWr5avWQsd"
+                BuildConfig.PARSE_API_KEY
             )
             if (response.isSuccessful) {
                 val responseBody = response.body()
@@ -549,9 +552,9 @@ class Repository(val dataApi: RestApi) {
         try {
             val response = dataApi.getShapes(
                 appId =
-                "zlB2X4kOFTPRWS7pZov1TpYppn3aATx0D7Jl7Rw3",
+                BuildConfig.PARSE_APP_ID,
                 apiKey =
-                "GydDLwYtELP4dC0P3jY7wJQbDbJn6bfWr5avWQsd"
+                BuildConfig.PARSE_API_KEY
             )
             if (response.isSuccessful) {
                 val responseBody = response.body()
@@ -577,9 +580,9 @@ class Repository(val dataApi: RestApi) {
         try {
             val response = dataApi.getAnimals(
                 appId =
-                "zlB2X4kOFTPRWS7pZov1TpYppn3aATx0D7Jl7Rw3",
+                BuildConfig.PARSE_APP_ID,
                 apiKey =
-                "GydDLwYtELP4dC0P3jY7wJQbDbJn6bfWr5avWQsd"
+                BuildConfig.PARSE_API_KEY
             )
             if (response.isSuccessful) {
                 val responseBody = response.body()
@@ -605,9 +608,9 @@ class Repository(val dataApi: RestApi) {
         try {
             val response = dataApi.getBirds(
                 appId =
-                "zlB2X4kOFTPRWS7pZov1TpYppn3aATx0D7Jl7Rw3",
+                BuildConfig.PARSE_APP_ID,
                 apiKey =
-                "GydDLwYtELP4dC0P3jY7wJQbDbJn6bfWr5avWQsd"
+                BuildConfig.PARSE_API_KEY
             )
             if (response.isSuccessful) {
                 val responseBody = response.body()
@@ -633,9 +636,9 @@ class Repository(val dataApi: RestApi) {
         try {
             val response = dataApi.getFlowers(
                 appId =
-                "zlB2X4kOFTPRWS7pZov1TpYppn3aATx0D7Jl7Rw3",
+                BuildConfig.PARSE_APP_ID,
                 apiKey =
-                "GydDLwYtELP4dC0P3jY7wJQbDbJn6bfWr5avWQsd"
+                BuildConfig.PARSE_API_KEY
             )
             if (response.isSuccessful) {
                 val responseBody = response.body()
@@ -661,9 +664,9 @@ class Repository(val dataApi: RestApi) {
         try {
             val response = dataApi.getFruits(
                 appId =
-                "zlB2X4kOFTPRWS7pZov1TpYppn3aATx0D7Jl7Rw3",
+                BuildConfig.PARSE_APP_ID,
                 apiKey =
-                "GydDLwYtELP4dC0P3jY7wJQbDbJn6bfWr5avWQsd"
+                BuildConfig.PARSE_API_KEY
             )
             if (response.isSuccessful) {
                 val responseBody = response.body()
@@ -689,9 +692,9 @@ class Repository(val dataApi: RestApi) {
         try {
             val response = dataApi.getMonths(
                 appId =
-                "zlB2X4kOFTPRWS7pZov1TpYppn3aATx0D7Jl7Rw3",
+                BuildConfig.PARSE_APP_ID,
                 apiKey =
-                "GydDLwYtELP4dC0P3jY7wJQbDbJn6bfWr5avWQsd"
+                BuildConfig.PARSE_API_KEY
             )
             if (response.isSuccessful) {
                 val responseBody = response.body()
@@ -717,9 +720,9 @@ class Repository(val dataApi: RestApi) {
         try {
             val response = dataApi.getVegetables(
                 appId =
-                "zlB2X4kOFTPRWS7pZov1TpYppn3aATx0D7Jl7Rw3",
+                BuildConfig.PARSE_APP_ID,
                 apiKey =
-                "GydDLwYtELP4dC0P3jY7wJQbDbJn6bfWr5avWQsd"
+                BuildConfig.PARSE_API_KEY
             )
             if (response.isSuccessful) {
                 val responseBody = response.body()
@@ -745,9 +748,9 @@ class Repository(val dataApi: RestApi) {
         try {
             val response = dataApi.getBodyParts(
                 appId =
-                "zlB2X4kOFTPRWS7pZov1TpYppn3aATx0D7Jl7Rw3",
+                BuildConfig.PARSE_APP_ID,
                 apiKey =
-                "GydDLwYtELP4dC0P3jY7wJQbDbJn6bfWr5avWQsd"
+                BuildConfig.PARSE_API_KEY
             )
             if (response.isSuccessful) {
                 val responseBody = response.body()
@@ -773,9 +776,9 @@ class Repository(val dataApi: RestApi) {
         try {
             val response = dataApi.getClothes(
                 appId =
-                "zlB2X4kOFTPRWS7pZov1TpYppn3aATx0D7Jl7Rw3",
+                BuildConfig.PARSE_APP_ID,
                 apiKey =
-                "GydDLwYtELP4dC0P3jY7wJQbDbJn6bfWr5avWQsd"
+                BuildConfig.PARSE_API_KEY
             )
             if (response.isSuccessful) {
                 val responseBody = response.body()
@@ -801,9 +804,9 @@ class Repository(val dataApi: RestApi) {
         try {
             val response = dataApi.getCountry(
                 appId =
-                "zlB2X4kOFTPRWS7pZov1TpYppn3aATx0D7Jl7Rw3",
+                BuildConfig.PARSE_APP_ID,
                 apiKey =
-                "GydDLwYtELP4dC0P3jY7wJQbDbJn6bfWr5avWQsd"
+                BuildConfig.PARSE_API_KEY
             )
             if (response.isSuccessful) {
                 val responseBody = response.body()
@@ -829,9 +832,9 @@ class Repository(val dataApi: RestApi) {
         try {
             val response = dataApi.getFoods(
                 appId =
-                "zlB2X4kOFTPRWS7pZov1TpYppn3aATx0D7Jl7Rw3",
+                BuildConfig.PARSE_APP_ID,
                 apiKey =
-                "GydDLwYtELP4dC0P3jY7wJQbDbJn6bfWr5avWQsd"
+                BuildConfig.PARSE_API_KEY
             )
             if (response.isSuccessful) {
                 val responseBody = response.body()
@@ -857,9 +860,9 @@ class Repository(val dataApi: RestApi) {
         try {
             val response = dataApi.getGeometry(
                 appId =
-                "zlB2X4kOFTPRWS7pZov1TpYppn3aATx0D7Jl7Rw3",
+                BuildConfig.PARSE_APP_ID,
                 apiKey =
-                "GydDLwYtELP4dC0P3jY7wJQbDbJn6bfWr5avWQsd"
+                BuildConfig.PARSE_API_KEY
             )
             if (response.isSuccessful) {
                 val responseBody = response.body()
@@ -885,9 +888,9 @@ class Repository(val dataApi: RestApi) {
         try {
             val response = dataApi.getHouses(
                 appId =
-                "zlB2X4kOFTPRWS7pZov1TpYppn3aATx0D7Jl7Rw3",
+                BuildConfig.PARSE_APP_ID,
                 apiKey =
-                "GydDLwYtELP4dC0P3jY7wJQbDbJn6bfWr5avWQsd"
+                BuildConfig.PARSE_API_KEY
             )
             if (response.isSuccessful) {
                 val responseBody = response.body()
@@ -913,9 +916,9 @@ class Repository(val dataApi: RestApi) {
         try {
             val response = dataApi.getJobs(
                 appId =
-                "zlB2X4kOFTPRWS7pZov1TpYppn3aATx0D7Jl7Rw3",
+                BuildConfig.PARSE_APP_ID,
                 apiKey =
-                "GydDLwYtELP4dC0P3jY7wJQbDbJn6bfWr5avWQsd"
+                BuildConfig.PARSE_API_KEY
             )
             if (response.isSuccessful) {
                 val responseBody = response.body()
@@ -941,9 +944,9 @@ class Repository(val dataApi: RestApi) {
         try {
             val response = dataApi.getSchool(
                 appId =
-                "zlB2X4kOFTPRWS7pZov1TpYppn3aATx0D7Jl7Rw3",
+                BuildConfig.PARSE_APP_ID,
                 apiKey =
-                "GydDLwYtELP4dC0P3jY7wJQbDbJn6bfWr5avWQsd"
+                BuildConfig.PARSE_API_KEY
             )
             if (response.isSuccessful) {
                 val responseBody = response.body()
@@ -969,9 +972,9 @@ class Repository(val dataApi: RestApi) {
         try {
             val response = dataApi.getSports(
                 appId =
-                "zlB2X4kOFTPRWS7pZov1TpYppn3aATx0D7Jl7Rw3",
+                BuildConfig.PARSE_APP_ID,
                 apiKey =
-                "GydDLwYtELP4dC0P3jY7wJQbDbJn6bfWr5avWQsd"
+                BuildConfig.PARSE_API_KEY
             )
             if (response.isSuccessful) {
                 val responseBody = response.body()
@@ -997,9 +1000,9 @@ class Repository(val dataApi: RestApi) {
         try {
             val response = dataApi.getVehicles(
                 appId =
-                "zlB2X4kOFTPRWS7pZov1TpYppn3aATx0D7Jl7Rw3",
+                BuildConfig.PARSE_APP_ID,
                 apiKey =
-                "GydDLwYtELP4dC0P3jY7wJQbDbJn6bfWr5avWQsd"
+                BuildConfig.PARSE_API_KEY
             )
             if (response.isSuccessful) {
                 val responseBody = response.body()
@@ -1025,9 +1028,9 @@ class Repository(val dataApi: RestApi) {
         try {
             val response = dataApi.getDailyRoutine(
                 appId =
-                "zlB2X4kOFTPRWS7pZov1TpYppn3aATx0D7Jl7Rw3",
+                BuildConfig.PARSE_APP_ID,
                 apiKey =
-                "GydDLwYtELP4dC0P3jY7wJQbDbJn6bfWr5avWQsd"
+                BuildConfig.PARSE_API_KEY
             )
             if (response.isSuccessful) {
                 val responseBody = response.body()
@@ -1053,9 +1056,9 @@ class Repository(val dataApi: RestApi) {
         try {
             val response = dataApi.getFaceExpressions(
                 appId =
-                "zlB2X4kOFTPRWS7pZov1TpYppn3aATx0D7Jl7Rw3",
+                BuildConfig.PARSE_APP_ID,
                 apiKey =
-                "GydDLwYtELP4dC0P3jY7wJQbDbJn6bfWr5avWQsd"
+                BuildConfig.PARSE_API_KEY
             )
             if (response.isSuccessful) {
                 val responseBody = response.body()
@@ -1081,9 +1084,9 @@ class Repository(val dataApi: RestApi) {
         try {
             val response = dataApi.getAnimalHouses(
                 appId =
-                "zlB2X4kOFTPRWS7pZov1TpYppn3aATx0D7Jl7Rw3",
+                BuildConfig.PARSE_APP_ID,
                 apiKey =
-                "GydDLwYtELP4dC0P3jY7wJQbDbJn6bfWr5avWQsd"
+                BuildConfig.PARSE_API_KEY
             )
             if (response.isSuccessful) {
                 val responseBody = response.body()

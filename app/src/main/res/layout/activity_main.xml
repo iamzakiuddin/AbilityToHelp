@@ -42,7 +42,6 @@
                     android:layout_height="40dp"
                     android:layout_gravity="center"
                     android:layout_margin="10.0dip"
-                    android:src="@drawable/btn_disclaimer"
                     android:visibility="gone" />
 
                 <ImageView
@@ -51,7 +50,6 @@
                     android:layout_height="40.0dip"
                     android:layout_gravity="center"
                     android:layout_margin="10.0dip"
-                    android:src="@drawable/btn_exit"
                     android:visibility="gone" />
 
                 <ImageView
@@ -64,7 +62,7 @@
                     android:adjustViewBounds="true"
                     android:onClick="onClickSetting"
                     android:visibility="gone"
-                    android:src="@drawable/ic_setting" />
+                    />
             </RelativeLayout>
 
         </RelativeLayout>

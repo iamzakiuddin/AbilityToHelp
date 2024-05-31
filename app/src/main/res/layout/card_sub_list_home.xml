@@ -24,6 +24,6 @@
             android:layout_height="@dimen/cell_height"
             android:layout_gravity="center"
             android:padding="10.0dip"
-            android:src="@drawable/a" />
+            />
     </LinearLayout>
 </androidx.cardview.widget.CardView>

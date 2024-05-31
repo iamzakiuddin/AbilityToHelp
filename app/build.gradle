@@ -14,12 +14,15 @@ android {
         applicationId "com.adroidapp.abilitytohelp"
         minSdk 21
         targetSdk 34
-        versionCode 5
-        versionName "1.0.4"
+        versionCode 6
+        versionName "1.0.5"
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
         buildConfigField("String", "GEMINI_AI", "\"" + properties['API_KEY']+"\"")
         buildConfigField("String","BANNER_ID","\"" + properties['BANNER_ID']+"\"")
         buildConfigField("String","INTERSTITIAL_ID","\"" + properties['INTERSTITIAL_ID']+"\"")
+        buildConfigField("String","PARSE_APP_ID","\"" + properties['PARSE_APP_ID']+"\"")
+        buildConfigField("String","PARSE_API_KEY","\"" + properties['PARSE_API_KEY']+"\"")
+        buildConfigField("String","PARSE_CLIENT_KEY","\"" + properties['PARSE_CLIENT_KEY']+"\"")
         resValue("string","ADS_ID","\"" + properties['ADS_ID']+"\"")
         resValue("string","PARSE_APP_ID","\"" + properties['PARSE_APP_ID']+"\"")
         resValue("string","PARSE_CLIENT_KEY","\"" + properties['PARSE_CLIENT_KEY']+"\"")

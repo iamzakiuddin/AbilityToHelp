@@ -35,7 +35,6 @@ class MainMenu : AppCompatActivity(), AdsCallback {
     var mySchool: Button? = null
     var myGrammar: Button? = null
     var funActivity: Button? = null
-    var basicConversation: Button? = null
     var llAdView: RelativeLayout? = null
     var llAdViewFacebook: LinearLayout? = null
     var profileIcon: ImageView? = null
@@ -48,7 +47,6 @@ class MainMenu : AppCompatActivity(), AdsCallback {
         mySchool = findViewById(R.id.mySchool)
         myGrammar = findViewById(R.id.my_grammar)
         funActivity = findViewById(R.id.funactivity)
-        basicConversation = findViewById(R.id.basicConvo)
         llAdView = findViewById(R.id.llAdView)
         llAdViewFacebook = findViewById(R.id.llAdViewFacebook)
         profileIcon = findViewById(R.id.profileIcon)
@@ -70,10 +68,6 @@ class MainMenu : AppCompatActivity(), AdsCallback {
         }
         funActivity?.setOnClickListener {
             startActivity(Intent(this, FunActivity::class.java))
-            overridePendingTransition(R.anim.slide_up_a, R.anim.slide_up_b)
-        }
-        basicConversation?.setOnClickListener {
-            startActivity(Intent(this,BasicConversationActivity::class.java))
             overridePendingTransition(R.anim.slide_up_a, R.anim.slide_up_b)
         }
         profileButton?.setOnClickListener {
