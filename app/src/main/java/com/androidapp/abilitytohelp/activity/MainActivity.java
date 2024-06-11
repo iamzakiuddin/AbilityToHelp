@@ -124,10 +124,6 @@ public class MainActivity extends AppCompatActivity implements CallbackListener,
     }
 
 
-    public void onClickSetting(View view){
-        Intent intent= new Intent(MainActivity.this,SettingActivity.class);
-        startActivityForResult(intent,111);
-    }
 
     HomeAdapter homeAdapter;
     RecyclerView rvCategory;

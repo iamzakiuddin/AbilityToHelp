@@ -118,21 +118,4 @@
         app:layout_constraintBottom_toBottomOf="parent"
         android:visibility="gone" />
 
-    <FrameLayout
-        android:id="@+id/profileBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="90dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        >
-        <ImageView
-            android:id="@+id/profileIcon"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/account"
-            android:layout_margin="20dp"
-            android:layout_gravity="bottom|left"
-            />
-    </FrameLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

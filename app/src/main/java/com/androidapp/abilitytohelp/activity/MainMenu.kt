@@ -9,23 +9,16 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
-import android.widget.FrameLayout
-import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import com.androidapp.abilitytohelp.R
-import com.androidapp.abilitytohelp.activity.profile.AuthenticationActivity
-import com.androidapp.abilitytohelp.activity.profile.ProfileActivity
 import com.androidapp.abilitytohelp.broadcastmanagers.DailyBroadcast
 import com.androidapp.abilitytohelp.interfaces.AdsCallback
 import com.androidapp.abilitytohelp.utils.CommonConstantAd
 import com.androidapp.abilitytohelp.utils.Utils
-import com.parse.ParseUser
 import hotchemi.android.rate.AppRate
 import java.util.Calendar
 
@@ -37,8 +30,6 @@ class MainMenu : AppCompatActivity(), AdsCallback {
     var funActivity: Button? = null
     var llAdView: RelativeLayout? = null
     var llAdViewFacebook: LinearLayout? = null
-    var profileIcon: ImageView? = null
-    var profileButton : FrameLayout? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,8 +40,6 @@ class MainMenu : AppCompatActivity(), AdsCallback {
         funActivity = findViewById(R.id.funactivity)
         llAdView = findViewById(R.id.llAdView)
         llAdViewFacebook = findViewById(R.id.llAdViewFacebook)
-        profileIcon = findViewById(R.id.profileIcon)
-        profileButton = findViewById(R.id.profileBtn)
 
         createNotificationChannel()
         setupDailyNotificationReminder()
@@ -70,13 +59,7 @@ class MainMenu : AppCompatActivity(), AdsCallback {
             startActivity(Intent(this, FunActivity::class.java))
             overridePendingTransition(R.anim.slide_up_a, R.anim.slide_up_b)
         }
-        profileButton?.setOnClickListener {
-            if (ParseUser.getCurrentUser() != null) {
-                startActivity(Intent(this, ProfileActivity::class.java))
-            } else {
-                startActivity(Intent(this, AuthenticationActivity::class.java))
-            }
-        }
+
         AppRate.with(this)
             .setInstallDays(0) // default 10, 0 means install day.
             .setLaunchTimes(3) // default 10
